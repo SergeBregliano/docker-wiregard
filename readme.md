@@ -15,6 +15,19 @@ Préciser notamment :
 - DATA_PATH : chemin pour le stockage des données.
 - PEERS : noms des fichiers de configuration client en majuscule, séparés par une virgule.
 
+Afin d'afficher facilement les fichiers de configuration, il est utile de paramétrer l'utilisateur avec lequel Wireguard fonctionnera. Pour se faire, il faut renseigner les champs :
+
+- PUID
+- PGID
+
+Ces deux éléments correspondent au ``uid`` et ``gid`` qui sont affichés lors de de la commande :
+
+```shell
+id
+```
+
+
+
 ## Configuration client
 
 Installer le [client Wireguard](https://www.wireguard.com/install/).
