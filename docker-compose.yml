@@ -1,0 +1,24 @@
+version: "2.1"
+services:
+  wireguard:
+    image: linuxserver/wireguard
+    container_name: wireguard
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Paris
+      - SERVERURL=${VIRTUAL_HOST}
+      - SERVERPORT=51820
+      - PEERS=${PEERS}
+      - PEERDNS=auto
+      - INTERNAL_SUBNET=10.13.13.0
+      - ALLOWEDIPS=0.0.0.0/0
+    volumes:
+      - ${DATA_PATH}/config:/config
+      - ${DATA_PATH}/modules:/lib/modules
+    ports:
+      - 51820:51820/udp
+    restart: unless-stopped
