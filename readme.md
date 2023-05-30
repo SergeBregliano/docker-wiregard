@@ -20,6 +20,7 @@ Préciser notamment :
 Installer le [client Wireguard](https://www.wireguard.com/install/).
 
 Ajouter une entrée PEERS dans le fichier d'environnement ``.env`` sur le serveur. Chaque entrée PEERS correspond à un appareil (téléphone, ordinateur, etc.).
+**Attention** : les entrées PEERS ne peuvent contenir que des caractères alphanumériques.
 
 Par exemple, pour un simple téléphone, l'entrée ressemblerait à ça :
 
